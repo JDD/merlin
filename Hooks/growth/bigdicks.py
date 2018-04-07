@@ -24,7 +24,7 @@ from Core.db import session
 from Core.maps import User, epenis
 from Core.loadable import loadable, route
 
-class bigdicks(loadable):
+class topscorers(loadable):
     """Members with the highest score gain in the last 72 ticks"""
     
     @route(access = "member")
@@ -36,11 +36,11 @@ class bigdicks(loadable):
         result = Q[:5]
         
         if len(result) < 1:
-            message.alert("There is no penis")
+            message.alert("There is no Growth")
             return
         
         prev = []
         for user, penis in result:
             prev.append("%d:%s (%s)"%(penis.rank, user.name, self.num2short(penis.penis)))
-        reply="Big dicks: " + ", ".join(prev)
+        reply="Top Scorers: " + ", ".join(prev)
         message.reply(reply)

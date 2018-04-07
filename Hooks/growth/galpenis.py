@@ -22,7 +22,7 @@
 from Core.maps import Galaxy
 from Core.loadable import loadable, route
 
-class galpenis(loadable):
+class galgrowth(loadable):
     """Galaxy score gain in the last 72 ticks"""
     usage = " <x:y>"
     
@@ -36,8 +36,8 @@ class galpenis(loadable):
         
         penis = galaxy.galpenis
         if penis is None:
-            message.alert("No galpenis stats matching %s:%s" % params.group(1,3))
+            message.alert("No galaxy growth stats matching %s:%s" % params.group(1,3))
             return
         
-        message.reply("galpenis for '%s' is %s score long. This makes %s:%s rank: %s for galpenis in the universe!" % (
+        message.reply("galaxy growth for '%s' is %s score long. This makes %s:%s rank: %s for growth in the universe!" % (
                         galaxy.name, penis.penis, galaxy.x, galaxy.y, penis.rank,))

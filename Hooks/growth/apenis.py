@@ -23,7 +23,7 @@ from Core.config import Config
 from Core.maps import Alliance
 from Core.loadable import loadable, route
 
-class apenis(loadable):
+class agrowth(loadable):
     """Alliance score gain in the last 72 ticks"""
     usage = " [alliance]"
     
@@ -50,8 +50,8 @@ class apenis(loadable):
         
         penis = alliance.apenis
         if penis is None:
-            message.alert("No apenis stats matching %s" % (alliance.name,))
+            message.alert("No alliance growth stats matching %s" % (alliance.name,))
             return
         
-        message.reply("apenis for %s is %s score long. This makes %s rank: %s apenis. The average peon is sporting a %s score epenis." % (
+        message.reply("alliance growth for %s is %s scoreg. This makes %s rank: %s in score. The average membern is sporting a %s score growth." % (
                         alliance.name, penis.penis, alliance.name, penis.rank, int(penis.penis/alliance.members),))

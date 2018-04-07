@@ -4,7 +4,7 @@
 <table cellspacing="1" cellpadding="3" class="black">
     <tr class="datahigh">
         <th colspan="4">
-            eQueens
+            Growth
         </th>
     </tr>
     <tr class="header">
