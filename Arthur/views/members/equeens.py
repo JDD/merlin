@@ -27,7 +27,7 @@ from Arthur.context import menu, render
 from Arthur.loadable import loadable, load
 name = Config.get("Alliance", "name")
 
-@menu(name, "eQueens")
+@menu(name, "Growth")
 @load
 class equeens(loadable):
     access = "member"

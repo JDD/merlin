@@ -34,7 +34,7 @@ class alliances(loadable):
     access = Config.get("Arthur", "intel")
     def execute(self, request, user, page="1", sort="score"):
         page = int(page)
-        offset = (page - 1)*50
+        offset = (page - 1)*60
         order =  {"members" : (desc("ialliances_members"),),
                   "size"  : (desc("ialliances_size"),),
                   "value" : (desc("ialliances_value"),),
@@ -91,10 +91,10 @@ class alliances(loadable):
         Q = Q.filter(alliance2.id == ialliances.c.id)
         
         count_ = Q.count()
-        pages = count_//50 + int(count_%50 > 0)
+        pages = count_//60 + int(count_%60 > 0)
         pages = range(1, 1+pages)
         
         for o in order:
             Q = Q.order_by(o)
-        Q = Q.limit(50).offset(offset)
+        Q = Q.limit(60).offset(offset)
         return render("ialliances.tpl", request, alliances=Q.all(), offset=offset, pages=pages, page=page, sort=sort)
